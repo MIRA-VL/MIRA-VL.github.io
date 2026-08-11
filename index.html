@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="MIRA is a medical visual diagnostic framework for autonomous evidence search and reflective verification.">
+  <meta name="author" content="Shengzhi Wang, Jun Yang, Kai Wu, Xiaozhong Ji, Yiwen Ye, Ziyang Chen, Mingliang Xiong, Wen Fang, Mingqing Liu, Mengyuan Xu, Miaoxuan Shan, Caiyan Liu, Bin He, Qingwen Liu">
+  <meta property="og:title" content="MIRA: Medical Image Reflection for Agentic Diagnosis">
+  <meta property="og:description" content="Medical image reflection for evidence-grounded agentic diagnosis.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://vesdas.github.io/MIRA/">
+  <title>MIRA: Medical Image Reflection for Agentic Diagnosis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <main>
+      <p class="eyebrow">Medical Visual Reasoning</p>
+      <h1><span>MIRA</span>: Medical Image Reflection for Agentic Diagnosis</h1>
+      <div class="authors">
+        Shengzhi Wang · Jun Yang · Kai Wu · Xiaozhong Ji · Yiwen Ye · Ziyang Chen · Mingliang Xiong · Wen Fang · Mingqing Liu · Mengyuan Xu · Miaoxuan Shan · Caiyan Liu · Bin He · Qingwen Liu
+      </div>
+      <div class="affiliations">Tongji University · Nanjing University · Northwestern Polytechnical University · People's Public Security University of China · École Normale Supérieure — PSL</div>
+      <div class="badges"><span>♠ Xiaozhong Ji: Project Leader</span><span>† Qingwen Liu: Corresponding Author</span></div>
+      <nav><a class="button" href="static/pdfs/MIRA.pdf">Paper</a></nav>
+    </main>
+  </header>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p class="lead">MIRA enables diagnosis-oriented reasoning through autonomous evidence search and reflective verification. It decides when external tools are necessary, checks whether acquired evidence supports the current hypothesis, and corrects weak or contradictory reasoning.</p>
+      <div class="pill-row"><span>Zoom</span><span>Grounding</span><span>Pointing</span><span>Measurement</span><span>Web Search</span><span>Reflection</span></div>
+    </section>
+
+    <section>
+      <h2>Tool-Augmented MCTS Data Engine</h2>
+      <p>Our supervised fine-tuning stage uses tool-augmented Monte Carlo Tree Search to explore diverse diagnostic hypotheses and jointly verify visual grounding and semantic consistency during tree expansion.</p>
+      <figure><img src="static/images/mcts-training.png" alt="MIRA tool-augmented MCTS training pipeline"></figure>
+    </section>
+
+    <section>
+      <h2>Online Reflective Principle Evolution</h2>
+      <p>During reinforcement learning, failures are distilled into reusable diagnostic principles. Candidate memory updates are accepted only when they improve held-out rollout reward under the same frozen policy.</p>
+      <figure><img src="static/images/mira-rl.png" alt="MIRA reinforcement learning and reflection memory pipeline"></figure>
+    </section>
+
+    <section>
+      <h2>Results</h2>
+      <p>MIRA consistently improves over its Qwen3-VL-8B backbone across medical visual reasoning benchmarks while reducing harmful and unnecessary tool use.</p>
+      <figure class="narrow"><img src="static/images/results.png" alt="MIRA benchmark results"></figure>
+    </section>
+
+    <section class="release">
+      <h2>Resources</h2>
+      <p>Model, data, and code resources will be released after preparation.</p>
+    </section>
+  </main>
+
+  <footer>MIRA · Medical Image Reflection for Agentic Diagnosis</footer>
+</body>
+</html>
