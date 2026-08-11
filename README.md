@@ -4,10 +4,6 @@ Official project page for MIRA, a medical visual diagnostic framework for autono
 
 Project page: https://MIRA-VL.github.io/
 
-## Resources
-
-- Paper: available from the project page
-
 ## Local preview
 
 The site is dependency-free static HTML and CSS. From the repository root, run:
