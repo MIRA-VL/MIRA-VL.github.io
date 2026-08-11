@@ -5,58 +5,237 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="MIRA is a medical visual diagnostic framework for autonomous evidence search and reflective verification.">
   <meta name="author" content="Shengzhi Wang, Jun Yang, Kai Wu, Xiaozhong Ji, Yiwen Ye, Ziyang Chen, Mingliang Xiong, Wen Fang, Mingqing Liu, Mengyuan Xu, Miaoxuan Shan, Caiyan Liu, Bin He, Qingwen Liu">
+  <meta name="theme-color" content="#102746">
+  <link rel="canonical" href="https://vesdas.github.io/MIRA/">
+
   <meta property="og:title" content="MIRA: Medical Image Reflection for Agentic Diagnosis">
   <meta property="og:description" content="Medical image reflection for evidence-grounded agentic diagnosis.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://vesdas.github.io/MIRA/">
+  <meta property="og:image" content="https://vesdas.github.io/MIRA/static/images/teaser-tool-reflection.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MIRA: Medical Image Reflection for Agentic Diagnosis">
+  <meta name="twitter:description" content="Medical image reflection for evidence-grounded agentic diagnosis.">
+  <meta name="twitter:image" content="https://vesdas.github.io/MIRA/static/images/teaser-tool-reflection.webp">
+
+  <meta name="citation_title" content="MIRA: Medical Image Reflection for Agentic Diagnosis">
+  <meta name="citation_pdf_url" content="https://vesdas.github.io/MIRA/static/pdfs/MIRA.pdf">
+
   <title>MIRA: Medical Image Reflection for Agentic Diagnosis</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="hero">
-    <main>
-      <p class="eyebrow">Medical Visual Reasoning</p>
-      <h1><span>MIRA</span>: Medical Image Reflection for Agentic Diagnosis</h1>
-      <div class="authors">
-        Shengzhi Wang · Jun Yang · Kai Wu · Xiaozhong Ji · Yiwen Ye · Ziyang Chen · Mingliang Xiong · Wen Fang · Mingqing Liu · Mengyuan Xu · Miaoxuan Shan · Caiyan Liu · Bin He · Qingwen Liu
-      </div>
-      <div class="affiliations">Tongji University · Nanjing University · Northwestern Polytechnical University · People's Public Security University of China · École Normale Supérieure — PSL</div>
-      <div class="badges"><span>♠ Xiaozhong Ji: Project Leader</span><span>† Qingwen Liu: Corresponding Author</span></div>
-      <nav><a class="button" href="static/pdfs/MIRA.pdf">Paper</a></nav>
-    </main>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="wordmark" href="#top" aria-label="MIRA home">MIRA</a>
+      <nav class="site-links" aria-label="Primary navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#cases">Cases</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#citation">Citation</a>
+      </nav>
+      <a class="nav-paper" href="static/pdfs/MIRA.pdf">Paper</a>
+    </div>
   </header>
 
-  <main class="content">
-    <section>
-      <h2>Overview</h2>
-      <p class="lead">MIRA enables diagnosis-oriented reasoning through autonomous evidence search and reflective verification. It decides when external tools are necessary, checks whether acquired evidence supports the current hypothesis, and corrects weak or contradictory reasoning.</p>
-      <div class="pill-row"><span>Zoom</span><span>Grounding</span><span>Pointing</span><span>Measurement</span><span>Web Search</span><span>Reflection</span></div>
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="page-title">
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="kicker">Medical visual reasoning with reflective tool use</p>
+        <h1 id="page-title"><span>MIRA</span>: Medical Image Reflection<br class="title-break"> for Agentic Diagnosis</h1>
+        <p class="contribution">An agentic diagnostic framework that searches for evidence, verifies what its tools reveal, and corrects unreliable conclusions.</p>
+
+        <p class="authors" aria-label="Authors">
+          <span>Shengzhi Wang<sup>1</sup></span><span>Jun Yang<sup>5</sup></span><span>Kai Wu<sup>1</sup></span><span>Xiaozhong Ji<sup>2,♠</sup></span><span>Yiwen Ye<sup>3</sup></span><span>Ziyang Chen<sup>3</sup></span><span>Mingliang Xiong<sup>1</sup></span><span>Wen Fang<sup>1</sup></span><span>Mingqing Liu<sup>1</sup></span><span>Mengyuan Xu<sup>1</sup></span><span>Miaoxuan Shan<sup>4</sup></span><span>Caiyan Liu<sup>1</sup></span><span>Bin He<sup>1</sup></span><span>Qingwen Liu<sup>1,†</sup></span>
+        </p>
+        <ol class="affiliations" aria-label="Affiliations">
+          <li><span>1</span> Tongji University</li>
+          <li><span>2</span> Nanjing University</li>
+          <li><span>3</span> Northwestern Polytechnical University</li>
+          <li><span>4</span> People’s Public Security University of China</li>
+          <li><span>5</span> École Normale Supérieure — PSL</li>
+        </ol>
+        <p class="role-legend"><span>♠ Project Leader</span><span>† Corresponding Author</span></p>
+
+        <div class="resource-row" aria-label="Project resources">
+          <a class="resource resource-active" href="static/pdfs/MIRA.pdf"><strong>Paper</strong><small>Read PDF</small></a>
+          <span class="resource resource-pending"><strong>Code</strong><small>Coming Soon</small></span>
+          <span class="resource resource-pending"><strong>Model</strong><small>Coming Soon</small></span>
+          <span class="resource resource-pending"><strong>Data</strong><small>Coming Soon</small></span>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Tool-Augmented MCTS Data Engine</h2>
-      <p>Our supervised fine-tuning stage uses tool-augmented Monte Carlo Tree Search to explore diverse diagnostic hypotheses and jointly verify visual grounding and semantic consistency during tree expansion.</p>
-      <figure><img src="static/images/mcts-training.png" alt="MIRA tool-augmented MCTS training pipeline"></figure>
+    <section class="teaser section-shell" aria-labelledby="teaser-title">
+      <div class="teaser-copy">
+        <p class="section-label">Tool-level reflection</p>
+        <h2 id="teaser-title">Look. Verify.<br>Reflect. Correct.</h2>
+        <ol class="reflection-steps">
+          <li><span>01</span><div><strong>Inspect globally.</strong><p>Begin with the complete image and the clinical question before selecting a tool.</p></div></li>
+          <li><span>02</span><div><strong>Question insufficient evidence.</strong><p>Check whether the current observation actually supports the working diagnosis.</p></div></li>
+          <li><span>03</span><div><strong>Refine with zoom.</strong><p>Acquire targeted visual evidence, then revise or retain the conclusion accordingly.</p></div></li>
+        </ol>
+        <p class="teaser-note">MIRA reflects on tool actions and evidence quality—not by displaying private reasoning, but by verifying whether acquired evidence is relevant, sufficient, and consistent before producing an answer.</p>
+      </div>
+      <figure class="teaser-figure">
+        <div class="teaser-image-frame">
+          <img src="static/images/teaser-tool-reflection.webp" width="567" height="929" loading="lazy" decoding="async" alt="Example of MIRA inspecting a medical image, recognizing insufficient evidence, and zooming to verify the finding">
+        </div>
+        <figcaption>Targeted visual inspection turns an uncertain first observation into evidence-grounded correction.</figcaption>
+      </figure>
     </section>
 
-    <section>
-      <h2>Online Reflective Principle Evolution</h2>
-      <p>During reinforcement learning, failures are distilled into reusable diagnostic principles. Candidate memory updates are accepted only when they improve held-out rollout reward under the same frozen policy.</p>
-      <figure><img src="static/images/mira-rl.png" alt="MIRA reinforcement learning and reflection memory pipeline"></figure>
+    <section class="abstract section-shell" id="abstract" aria-labelledby="abstract-title">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="section-label">Abstract</p>
+          <h2 id="abstract-title">Evidence before conclusion.</h2>
+        </div>
+        <p class="abstract-copy">Medical visual agents can use tools to inspect images and retrieve knowledge, yet indiscriminate tool calls may introduce noisy or misleading evidence. MIRA combines autonomous evidence search with reflective verification: it decides when tools are needed, evaluates whether their outputs support the current hypothesis, and corrects unreliable paths. Training pairs tool-augmented Monte Carlo Tree Search with jointly verified visual and semantic signals to generate supervised fine-tuning data, then evolves reusable reflective principles online during reinforcement learning. Across nine medical visual reasoning benchmarks, MIRA reaches a <strong>64.73 average</strong>, improving its backbone by <strong>7.44 score points</strong> while making tool use more useful and less harmful.</p>
+      </div>
+      <div class="capability-row" aria-label="MIRA capabilities">
+        <span>Grounding</span><span>Point</span><span>Zoom</span><span>Rotate</span><span>Measure</span><span>Search</span><span>Reflect</span>
+      </div>
+
+      <div class="metrics" aria-label="Key results">
+        <article class="metric-card metric-primary">
+          <p class="metric-value">64.73</p>
+          <h3>Average score</h3>
+          <p><strong>+7.44 score points</strong> from 57.29 across nine benchmarks.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-value">73.8%</p>
+          <h3>Useful judgments</h3>
+          <p><strong>+17.6 percentage points</strong> from 56.2%. Useful combines correct and insufficient-but-relevant categories.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-value">1.6%</p>
+          <h3>Harmful judgments</h3>
+          <p><strong>Down 7.3 percentage points</strong> from 8.9%, indicating fewer misleading tool interactions.</p>
+        </article>
+        <article class="metric-card">
+          <p class="metric-value">+28.57</p>
+          <h3>Fine-grained gain</h3>
+          <p>Percentage-point improvement on VQA-RAD Understanding, Diagnosis, and Suggestion.</p>
+        </article>
+      </div>
     </section>
 
-    <section>
-      <h2>Results</h2>
-      <p>MIRA consistently improves over its Qwen3-VL-8B backbone across medical visual reasoning benchmarks while reducing harmful and unnecessary tool use.</p>
-      <figure class="narrow"><img src="static/images/results.png" alt="MIRA benchmark results"></figure>
+    <section class="cases" id="cases" aria-labelledby="cases-title">
+      <div class="section-shell">
+        <div class="section-heading light-heading">
+          <p class="section-label">Qualitative cases</p>
+          <h2 id="cases-title">Correction becomes visible.</h2>
+          <p>Three examples show how MIRA checks textual, visual, and retrieved evidence before finalizing a response.</p>
+        </div>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-index"><span>Case 06</span><strong>Textual correction</strong></div>
+            <div class="case-viewer" tabindex="0" aria-label="Scrollable Case 6 figure">
+              <img src="static/images/case-textual-reflection.webp" width="667" height="1196" loading="lazy" decoding="async" alt="Case 6 showing textual reflection and zoom-based correction for an abdominal aorta finding">
+            </div>
+            <p>After an uncertain global assessment, a targeted zoom reveals a focal high-density calcified focus along the abdominal aortic wall, enabling correction of the initial description.</p>
+          </article>
+          <article class="case-card">
+            <div class="case-index"><span>Case 04</span><strong>Measurement</strong></div>
+            <div class="case-viewer" tabindex="0" aria-label="Scrollable Case 4 figure">
+              <img src="static/images/case-measurement.webp" width="777" height="1245" loading="lazy" decoding="async" alt="Case 4 comparing the measured long axis of a skin lesion with a fingernail reference">
+            </div>
+            <p>The measurement tool compares a 94-pixel lesion long axis with a 99-pixel fingernail reference, yielding a 0.95 ratio for a more grounded size judgment.</p>
+          </article>
+          <article class="case-card">
+            <div class="case-index"><span>Case 01</span><strong>Zoom + search</strong></div>
+            <div class="case-viewer" tabindex="0" aria-label="Scrollable Case 1 figure">
+              <img src="static/images/case-zoom-search.webp" width="790" height="1422" loading="lazy" decoding="async" alt="Case 1 using zoom and external search to assess swelling around a finger joint">
+            </div>
+            <p>Zoom localizes erythema and swelling at an interphalangeal joint; external search then contextualizes the observed presentation before the response is finalized.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="release">
-      <h2>Resources</h2>
-      <p>Model, data, and code resources will be released after preparation.</p>
+    <section class="method section-shell" id="method" aria-labelledby="method-title">
+      <div class="section-heading centered-heading">
+        <p class="section-label">Method</p>
+        <h2 id="method-title">Learn to search. Learn to reflect.</h2>
+        <p>MIRA is developed in two complementary stages that improve both evidence acquisition and evidence verification.</p>
+      </div>
+
+      <article class="method-stage">
+        <div class="stage-heading">
+          <span>Stage 01</span>
+          <div><h3>MIRA-SFT</h3><p>Tool-augmented MCTS explores diverse diagnostic hypotheses. During expansion, visual grounding and semantic consistency are jointly verified, producing higher-quality trajectories for supervised fine-tuning.</p></div>
+        </div>
+        <figure class="method-figure wide-method-figure">
+          <div class="wide-scroll" tabindex="0" aria-label="Scrollable MIRA-SFT method diagram">
+            <img src="static/images/method-mcts-reflection.webp" width="2222" height="689" loading="lazy" decoding="async" alt="Tool-augmented Monte Carlo Tree Search pipeline with visual and semantic reflection for MIRA-SFT">
+          </div>
+          <figcaption>Tool-augmented tree exploration and reflection-guided trajectory construction.</figcaption>
+        </figure>
+      </article>
+
+      <article class="method-stage stage-two">
+        <div class="stage-heading">
+          <span>Stage 02</span>
+          <div><h3>MIRA-RL</h3><p>Failures encountered during reinforcement learning are distilled into candidate diagnostic principles. A principle enters reflection memory only when it improves held-out rollout reward under the same frozen policy, preventing unhelpful updates from accumulating.</p></div>
+        </div>
+        <figure class="method-figure compact-method-figure">
+          <img src="static/images/method-reflection-memory.webp" width="710" height="604" loading="lazy" decoding="async" alt="Validation-gated online evolution of reflective principles in MIRA-RL">
+          <figcaption>Validation-gated reflective-principle evolution during reinforcement learning.</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section class="results" id="results" aria-labelledby="results-title">
+      <div class="section-shell">
+        <div class="section-heading centered-heading">
+          <p class="section-label">Results</p>
+          <h2 id="results-title">Stronger reasoning, safer tool use.</h2>
+          <p>Performance gains are accompanied by a shift toward evidence that helps rather than distracts.</p>
+        </div>
+        <div class="results-grid">
+          <article class="result-panel">
+            <div class="result-copy"><span>Across nine benchmarks</span><h3>64.73 average</h3><p>MIRA consistently improves over its Qwen3-VL-8B backbone across a broad medical visual reasoning evaluation.</p></div>
+            <figure>
+              <img src="static/images/benchmark-radar.webp" width="1864" height="1746" loading="lazy" decoding="async" alt="Radar chart comparing MIRA with its backbone across medical visual reasoning benchmarks">
+              <figcaption>Benchmark performance across complementary medical visual reasoning tasks.</figcaption>
+            </figure>
+          </article>
+          <article class="result-panel">
+            <div class="result-copy"><span>Tool necessity</span><h3>Right is useful. Down is safer.</h3><p>MIRA reaches <strong>73.8% useful</strong> judgments and only <strong>1.6% harmful</strong> judgments. In this analysis, desired movement is rightward toward useful evidence and downward away from harmful evidence.</p></div>
+            <figure>
+              <img src="static/images/tool-necessity.webp" width="1253" height="938" loading="lazy" decoding="async" alt="Tool-necessity plot showing MIRA moving right toward more useful and down toward fewer harmful tool judgments">
+              <figcaption>Useful combines correct and insufficient-but-relevant categories.</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="citation" id="citation" aria-labelledby="citation-title">
+      <div class="section-shell citation-layout">
+        <div>
+          <p class="section-label">Citation</p>
+          <h2 id="citation-title">Reference MIRA.</h2>
+          <p>Formal publication metadata is coming. Until then, please use the confirmed title and author list below and consult the paper for the current manuscript.</p>
+          <a class="text-link" href="static/pdfs/MIRA.pdf">Read the paper <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="citation-record" aria-label="Confirmed citation information">
+          <p class="citation-record-title">MIRA: Medical Image Reflection for Agentic Diagnosis</p>
+          <p>Shengzhi Wang, Jun Yang, Kai Wu, Xiaozhong Ji, Yiwen Ye, Ziyang Chen, Mingliang Xiong, Wen Fang, Mingqing Liu, Mengyuan Xu, Miaoxuan Shan, Caiyan Liu, Bin He, and Qingwen Liu.</p>
+          <p class="citation-status">Venue, year, identifier, and formal BibTeX: coming soon.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>MIRA · Medical Image Reflection for Agentic Diagnosis</footer>
+  <footer>
+    <div class="footer-inner"><strong>MIRA</strong><span>Medical Image Reflection for Agentic Diagnosis</span><a href="#top">Back to top</a></div>
+  </footer>
 </body>
 </html>
