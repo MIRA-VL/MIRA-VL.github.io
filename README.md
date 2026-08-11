@@ -2,7 +2,7 @@
 
 Official project page for MIRA, a medical visual diagnostic framework for autonomous evidence search and reflective verification.
 
-Project page: https://vesdas.github.io/MIRA/
+Project page: https://MIRA-VL.github.io/
 
 ## Resources
 
