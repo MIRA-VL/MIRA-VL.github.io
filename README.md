@@ -7,9 +7,6 @@ Project page: https://MIRA-VL.github.io/
 ## Resources
 
 - Paper: available from the project page
-- Code: coming soon
-- Model: coming soon
-- Data: coming soon
 
 ## Local preview
 
