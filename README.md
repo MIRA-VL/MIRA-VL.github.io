@@ -20,4 +20,16 @@ Figures on the page are derived from the MIRA manuscript and its qualitative and
 
 ## Citation
 
-Formal publication metadata is not yet available. The project page provides the confirmed title and complete author list; venue, year, identifier, and formal BibTeX will be added when available.
+MIRA is available on arXiv: [arXiv:2608.10827](https://arxiv.org/abs/2608.10827).
+
+```bibtex
+@misc{wang2026mira,
+  title={MIRA: Medical Image Reflection for Agentic Diagnosis},
+  author={Wang, Shengzhi and Yang, Jun and Wu, Kai and Ji, Xiaozhong and Ye, Yiwen and Chen, Ziyang and Xiong, Mingliang and Fang, Wen and Liu, Mingqing and Xu, Mengyuan and Shan, Miaoxuan and Liu, Caiyan and He, Bin and Liu, Qingwen},
+  year={2026},
+  eprint={2608.10827},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2608.10827}
+}
+```

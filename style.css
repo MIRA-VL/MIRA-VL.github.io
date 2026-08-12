@@ -859,9 +859,20 @@ figcaption {
 }
 
 .citation-status {
-  margin-bottom: 0;
   color: var(--muted) !important;
   font-size: 0.8rem;
+}
+
+.bibtex {
+  margin: 22px 0 0;
+  padding: 18px;
+  overflow-x: auto;
+  background: var(--navy-950);
+  color: #dce8f5;
+  border-radius: 2px;
+  font: 0.72rem/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  tab-size: 2;
+  white-space: pre;
 }
 
 footer {
