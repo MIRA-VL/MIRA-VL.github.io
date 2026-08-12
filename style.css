@@ -864,7 +864,7 @@ figcaption {
 }
 
 .bibtex {
-  margin: 22px 0 0;
+  margin: 0;
   padding: 18px;
   overflow-x: auto;
   background: var(--navy-950);
